@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', '1.3.3', :group => :development
 
 
 # Gems used only for assets and not required
@@ -30,4 +30,10 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+end
+
+# gemfile
+group :production do
+  gem "pg"
+  gem 'therubyracer', '~> 0.9.3.beta1'
 end
